@@ -46,7 +46,7 @@ const CASE_STUDIES = {
         body:['Wong y Metro son dos de las plataformas de supermercado más importantes de Perú, ambas parte de Cencosud. Comparten una estructura de negocio similar, pero cada marca tiene su propio posicionamiento y su propia audiencia, con necesidades que no siempre coinciden.',
               'Es un proyecto que nunca "termina": el producto evoluciona de forma iterativa, sumando funcionalidades y mejoras release tras release.'],
         images:[{id:'image-wong-context', label:'WONG & METRO', sub:'Contexto de marca', ratio:'16-10'}] },
-      { eyebrow:'EL DESAFÍO', title:'Escalar una experiencia, no rediseñar pantallas',
+      { side:true, imgFirst:true, eyebrow:'EL DESAFÍO', title:'Escalar una experiencia, no rediseñar pantallas',
         body:['El desafío nunca fue rediseñar pantallas sueltas. Era sostener y hacer crecer una experiencia de supermercado compleja —catálogos enormes, múltiples plataformas, distintos medios de pago, delivery, gestión de pedidos, post-compra, fidelización y dos marcas con identidad propia— sin perder consistencia ni escalabilidad entre Wong y Metro.'],
         images:[{id:'image-wong-challenge', label:'WONG & METRO', sub:'Complejidad del ecosistema', ratio:'16-10'}] },
       { eyebrow:'COLABORACIÓN', title:'Un proceso que se sostiene en equipo',
@@ -613,7 +613,7 @@ function renderCaseStudy(slug){
       return `
     <section class="cs-section">
       <div class="wrap">
-        <div class="cs-side">
+        <div class="cs-side${s.imgFirst ? ' cs-side-rev' : ''}">
           <div class="cs-side-text">
             <p class="eyebrow reveal" data-reveal>${s.eyebrow}</p>
             <div class="reveal" data-reveal>

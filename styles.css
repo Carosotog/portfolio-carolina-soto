@@ -1075,3 +1075,5 @@ section{ position:relative; }
 .cs-side-text .eyebrow{ margin-bottom:14px; }
 .cs-side-img .placeholder, .cs-side-img img{ width:100%; }
 @media (max-width:900px){ .cs-side{ grid-template-columns:1fr; gap:28px; } }
+
+.cs-side-rev .cs-side-img{ order:-1; }
