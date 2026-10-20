@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carolina Soto — UX/UI &amp; Product Designer</title>
+<meta name="description" content="Portfolio de Carolina Soto, UX/UI & Product Designer especializada en productos digitales, e-commerce, UX research, design systems y experiencias web & mobile.">
+<meta property="og:title" content="Carolina Soto — UX/UI & Product Designer">
+<meta property="og:description" content="Portfolio de Carolina Soto, UX/UI & Product Designer especializada en productos digitales, e-commerce, UX research, design systems y experiencias web & mobile.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23111111'/%3E%3Ctext x='50' y='68' font-size='60' fill='%23F6C900' text-anchor='middle' font-family='Georgia,serif'%3ECS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#" class="link-anim" onclick="Nav.toSection('sobre-mi');return false;">Sobre mí</a>
+      <a href="#" class="link-anim" onclick="Nav.toSection('proyectos');return false;">Proyectos</a>
+      <a href="#" class="link-anim" onclick="Nav.toSection('experiencia');return false;">Experiencia</a>
+      <a href="#" class="link-anim" onclick="Nav.toSection('contacto');return false;">Contacto</a>
+      <button class="lang-toggle" type="button">ES / EN
+        <span class="lang-tip">Versión en inglés próximamente</span>
+      </button>
+    </nav>
+    <button class="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" onclick="Nav.openMobile()">Menú</button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <div class="mobile-menu-top">
+    <button class="mobile-menu-close" type="button" onclick="Nav.closeMobile()">Cerrar</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="#" onclick="Nav.toSection('sobre-mi');return false;">Sobre mí</a>
+    <a href="#" onclick="Nav.toSection('proyectos');return false;">Proyectos</a>
+    <a href="#" onclick="Nav.toSection('experiencia');return false;">Experiencia</a>
+    <a href="#" onclick="Nav.toSection('contacto');return false;">Contacto</a>
+  </div>
+  <div class="mobile-menu-foot">
+    <span>Argentina · LATAM</span>
+    <span>ES / EN</span>
+  </div>
+</div>
+
+<main id="main"><div id="app"></div></main>
+
+<div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" onclick="Lightbox.close(event)">
+  <button class="img-lightbox-close" type="button" aria-label="Cerrar" onclick="Lightbox.close(event)">✕</button>
+  <img id="imgLightboxImg" src="" alt="">
+</div>
+
+<footer class="footer divider">
+  <div class="wrap footer-inner">
+    <div>
+      <div class="footer-logo">Carolina Soto</div>
+      <div class="footer-sub">UX/UI &amp; Product Designer</div>
+      <div class="footer-note">Argentina · 2026</div>
+    </div>
+    <div class="footer-links">
+      <a class="link-anim" href="mailto:carolinasotogomez1991@gmail.com">Email</a>
+      <a class="link-anim" href="https://www.linkedin.com/in/mariacarolinasotogomez/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer-note">Diseñado con intención.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
