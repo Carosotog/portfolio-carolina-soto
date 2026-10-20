@@ -1067,3 +1067,6 @@ section{ position:relative; }
 
 .cs-hero-img{ margin-top:36px; }
 .cs-hero-img img{ display:block; width:100%; height:auto; aspect-ratio:21/9; object-fit:cover; border-radius:var(--card-radius); }
+
+.cs-scope-marquee{ margin-top:0; margin-bottom:8px; }
+.cs-hero-img + .cs-meta-grid{ margin-top:40px; }

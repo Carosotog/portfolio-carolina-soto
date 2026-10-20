@@ -600,6 +600,8 @@ function renderCaseStudy(slug){
   if(!cs){ Router.go(''); return; }
   const next = CASE_STUDIES[cs.next];
 
+  const hasHeroImg = !!cs.heroImg.src;
+  const scopeSet = cs.scope.split(' · ').map(t=>`<span><em>·</em>${t}</span>`).join('');
   const metaHtml = cs.meta.map(m=>`
     <div><div class="cs-meta-label">${m.l}</div><div class="cs-meta-value">${m.v}</div></div>`).join('');
 
@@ -633,11 +635,11 @@ function renderCaseStudy(slug){
   document.getElementById('app').innerHTML = `
   <section class="cs-hero wrap">
     <a href="#" class="cs-back link-anim reveal" data-reveal onclick="Router.go('');return false;">← Volver al inicio</a>
-    <h1 class="display-xl cs-hero-title reveal" data-reveal>${cs.heroTitle}</h1>
-    <p class="body-lg reveal" data-reveal>${cs.heroDesc}</p>
+    ${hasHeroImg ? `<h1 class="sr-only">${cs.heroTitle}</h1>` : `<h1 class="display-xl cs-hero-title reveal" data-reveal>${cs.heroTitle}</h1>
+    <p class="body-lg reveal" data-reveal>${cs.heroDesc}</p>`}
     <div class="cs-hero-img reveal-img" data-reveal>${cs.heroImg.src ? `<img src="${cs.heroImg.src}" alt="${cs.heroImg.alt || ''}">` : ph(cs.heroImg.id, cs.heroImg.label, cs.heroImg.sub, cs.heroImg.ratio)}</div>
     <div class="cs-meta-grid reveal" data-reveal>${metaHtml}</div>
-    <p class="meta reveal" data-reveal>Alcance: ${cs.scope}</p>
+    ${hasHeroImg ? `<div class="marquee cs-scope-marquee reveal" data-reveal role="img" aria-label="Alcance: ${cs.scope}"><div class="marquee-track" aria-hidden="true">${scopeSet}${scopeSet}${scopeSet}${scopeSet}</div></div>` : `<p class="meta reveal" data-reveal>Alcance: ${cs.scope}</p>`}
   </section>
 
   ${sectionsHtml}
