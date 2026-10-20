@@ -45,7 +45,7 @@ const CASE_STUDIES = {
       { side:true, eyebrow:'CONTEXTO', title:'Dos marcas, un ecosistema en evolución',
         body:['Wong y Metro son dos de las plataformas de supermercado más importantes de Perú, ambas parte de Cencosud. Comparten una estructura de negocio similar, pero cada marca tiene su propio posicionamiento y su propia audiencia, con necesidades que no siempre coinciden.',
               'Es un proyecto que nunca "termina": el producto evoluciona de forma iterativa, sumando funcionalidades y mejoras release tras release.'],
-        images:[{id:'image-wong-context', label:'WONG & METRO', sub:'Contexto de marca', ratio:'16-10'}] },
+        images:[{id:'image-wong-context', label:'WONG & METRO', sub:'Contexto de marca', ratio:'16-10', src:'images/wong-metro-personas.jpg', alt:'User personas: Valeria y Marcos, compradores de Wong y de Metro'}] },
       { side:true, imgFirst:true, eyebrow:'EL DESAFÍO', title:'Escalar una experiencia, no rediseñar pantallas',
         body:['El desafío nunca fue rediseñar pantallas sueltas. Era sostener y hacer crecer una experiencia de supermercado compleja —catálogos enormes, múltiples plataformas, distintos medios de pago, delivery, gestión de pedidos, post-compra, fidelización y dos marcas con identidad propia— sin perder consistencia ni escalabilidad entre Wong y Metro.'],
         images:[{id:'image-wong-challenge', label:'WONG & METRO', sub:'Complejidad del ecosistema', ratio:'16-10'}] },
@@ -608,7 +608,7 @@ function renderCaseStudy(slug){
   const sectionsHtml = cs.sections.map(s=>{
     const bodyHtml = s.body.map(b=>`<p class="body-md" style="margin-bottom:14px;">${b}</p>`).join('');
     const gridClass = s.images.length>1 ? '' : 'single';
-    const imgsHtml = s.images.map(im=>ph(im.id, im.label, im.sub, im.ratio)).join('');
+    const imgsHtml = s.images.map(im=> im.src ? `<img class="cs-img" src="${im.src}" alt="${im.alt || ''}" loading="lazy">` : ph(im.id, im.label, im.sub, im.ratio)).join('');
     if(s.side){
       return `
     <section class="cs-section">
