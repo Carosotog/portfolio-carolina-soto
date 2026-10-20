@@ -1058,3 +1058,6 @@ section{ position:relative; }
 @media (max-width:620px){ .cs-impact .cs-impact-item{ flex-basis:88%; } }
 
 @media (min-width:641px){ .cs-section .section-sticker.sticker-right{ top:-34px; } }
+
+.project-card-cover{ display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--card-radius); transition:transform .7s var(--ease); }
+.project-card:hover .project-card-cover{ transform:scale(1.045); }

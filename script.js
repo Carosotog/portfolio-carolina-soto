@@ -8,7 +8,7 @@ const PROJECTS = [
     role:'Diseñadora principal — Wong &amp; Metro (asignación en Cencosud Perú)', period:'2021 — Actualidad',
     desc:'Rediseño y evolución continua de la experiencia de compra en web y app para Wong y Metro (Cencosud Perú), optimizando la navegación, la exploración de productos y el flujo completo de compra.',
     desc2:'El producto evolucionó desde un MVP inicial hacia un ecosistema multicanal en constante crecimiento, incorporando nuevas funcionalidades, servicios y herramientas de autogestión.',
-    imgId:'image-wong-metro-hero', imgLabel:'WONG & METRO', imgSub:'Experiencia de compra · Web + App', ratio:'4-5'
+    imgId:'image-wong-metro-hero', imgLabel:'WONG & METRO', imgSub:'Experiencia de compra · Web + App', ratio:'4-5', cover:'images/wong-metro-cover.jpg'
   },
   {
     slug:'fiteo', num:'02', company:'FITEO · SEATTLE, USA', name:'Fiteo',
@@ -234,7 +234,7 @@ function renderHome(){
       <div class="ui-card-text">${p.company}</div>
       <div class="ui-card-text">${p.category} · ${p.platform}</div>
       <div class="project-card-media">
-        ${ph(p.imgId, p.imgLabel, p.imgSub, p.ratio)}
+        ${p.cover ? `<img class="project-card-cover" src="${p.cover}" alt="${p.name}: web y app" loading="lazy">` : ph(p.imgId, p.imgLabel, p.imgSub, p.ratio)}
         <a href="#" class="project-card-btn" onclick="event.stopPropagation();Router.go('projects/${p.slug}');return false;">Ver más</a>
       </div>
     </article>
