@@ -1070,3 +1070,8 @@ section{ position:relative; }
 
 .cs-scope-marquee{ margin-top:0; margin-bottom:8px; }
 .cs-hero-img + .cs-meta-grid{ margin-top:40px; }
+
+.cs-side{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.cs-side-text .eyebrow{ margin-bottom:14px; }
+.cs-side-img .placeholder, .cs-side-img img{ width:100%; }
+@media (max-width:900px){ .cs-side{ grid-template-columns:1fr; gap:28px; } }

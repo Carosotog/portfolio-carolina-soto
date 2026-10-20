@@ -42,7 +42,7 @@ const CASE_STUDIES = {
     scope:'Discovery · Navegación · Checkout · Post-compra · Fidelización',
     heroImg:{id:'image-wong-hero-full', label:'WONG & METRO', sub:'Hero — plataformas web y mobile', ratio:'21-9', src:'images/wong-metro-hero.jpg', alt:'Rediseñando la experiencia: Wong y Metro, web y app'},
     sections:[
-      { eyebrow:'CONTEXTO', title:'Dos marcas, un ecosistema en evolución',
+      { side:true, eyebrow:'CONTEXTO', title:'Dos marcas, un ecosistema en evolución',
         body:['Wong y Metro son dos de las plataformas de supermercado más importantes de Perú, ambas parte de Cencosud. Comparten una estructura de negocio similar, pero cada marca tiene su propio posicionamiento y su propia audiencia, con necesidades que no siempre coinciden.',
               'Es un proyecto que nunca "termina": el producto evoluciona de forma iterativa, sumando funcionalidades y mejoras release tras release.'],
         images:[{id:'image-wong-context', label:'WONG & METRO', sub:'Contexto de marca', ratio:'16-10'}] },
@@ -609,6 +609,23 @@ function renderCaseStudy(slug){
     const bodyHtml = s.body.map(b=>`<p class="body-md" style="margin-bottom:14px;">${b}</p>`).join('');
     const gridClass = s.images.length>1 ? '' : 'single';
     const imgsHtml = s.images.map(im=>ph(im.id, im.label, im.sub, im.ratio)).join('');
+    if(s.side){
+      return `
+    <section class="cs-section">
+      <div class="wrap">
+        <div class="cs-side">
+          <div class="cs-side-text">
+            <p class="eyebrow reveal" data-reveal>${s.eyebrow}</p>
+            <div class="reveal" data-reveal>
+              <h3 class="display-lg" style="margin-bottom:18px;">${s.title}</h3>
+              ${bodyHtml}
+            </div>
+          </div>
+          <div class="cs-side-img">${imgsHtml}</div>
+        </div>
+      </div>
+    </section>`;
+    }
     return `
     <section class="cs-section">
       <div class="wrap">
