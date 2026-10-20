@@ -229,9 +229,8 @@ function phMotion(id, label, sub, ratio){
 function renderHome(){
   const projectRows = PROJECTS.map((p)=>`
     <article class="project-card ui-card reveal" data-reveal onclick="Router.go('projects/${p.slug}')" tabindex="0" role="link" aria-label="Ver caso de estudio: ${p.name}" onkeydown="if(event.key==='Enter')Router.go('projects/${p.slug}')">
-      <h3 class="ui-card-title">${p.name}</h3>
+      <div class="project-card-head"><h3 class="ui-card-title">${p.name}</h3><span class="project-card-company">${p.company}</span></div>
       <div class="ui-card-divider"></div>
-      <div class="ui-card-text">${p.company}</div>
       <div class="ui-card-text">${p.category} · ${p.platform}</div>
       <div class="project-card-media">
         ${p.cover ? `<img class="project-card-cover" src="${p.cover}" alt="${p.name}: web y app" loading="lazy">` : ph(p.imgId, p.imgLabel, p.imgSub, p.ratio)}
