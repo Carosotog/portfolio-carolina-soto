@@ -964,8 +964,8 @@ section{ position:relative; }
 /* ---- Skills: animated icons + plain text items ---- */
 .skill-card-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:28px; }
 .skill-anim{ height:28px; display:flex; align-items:center; justify-content:flex-end; gap:5px; }
-.skill-pill{ background:none; border-radius:0; padding:0; font-size:13px; font-weight:400; color:var(--ink-soft); line-height:1.45; }
-.skill-card-chips{ flex-direction:column; flex-wrap:nowrap; gap:4px; }
+.skill-pill{ background:var(--cream-deep); border-radius:999px; padding:6px 12px; font-size:13px; font-weight:500; color:var(--ink); line-height:1.2; white-space:nowrap; }
+.skill-card-chips{ flex-direction:row; flex-wrap:wrap; gap:8px; align-items:flex-start; }
 /* wireframe: header bar + two blocks fill in */
 .sk-wire{ align-items:stretch !important; display:grid !important; grid-template-columns:1fr 1fr; grid-template-rows:9px 14px; gap:4px; width:44px; align-content:center; }
 .sk-wire i{ display:block; border-radius:3px; background:rgba(2,38,30,0.14); animation:sk-on 5.5s var(--ease) infinite; }
