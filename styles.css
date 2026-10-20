@@ -1064,3 +1064,6 @@ section{ position:relative; }
 
 .project-card-head{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; }
 .project-card-company{ font-size:13px; font-weight:500; letter-spacing:0.04em; color:var(--ink-soft); text-align:right; }
+
+.cs-hero-img{ margin-top:36px; }
+.cs-hero-img img{ display:block; width:100%; height:auto; aspect-ratio:21/9; object-fit:cover; border-radius:var(--card-radius); }

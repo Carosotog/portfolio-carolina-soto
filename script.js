@@ -40,7 +40,7 @@ const CASE_STUDIES = {
       {l:'Período', v:'2021 — Actualidad'}
     ],
     scope:'Discovery · Navegación · Checkout · Post-compra · Fidelización',
-    heroImg:{id:'image-wong-hero-full', label:'WONG & METRO', sub:'Hero — plataformas web y mobile', ratio:'21-9'},
+    heroImg:{id:'image-wong-hero-full', label:'WONG & METRO', sub:'Hero — plataformas web y mobile', ratio:'21-9', src:'images/wong-metro-hero.jpg', alt:'Rediseñando la experiencia: Wong y Metro, web y app'},
     sections:[
       { eyebrow:'CONTEXTO', title:'Dos marcas, un ecosistema en evolución',
         body:['Wong y Metro son dos de las plataformas de supermercado más importantes de Perú, ambas parte de Cencosud. Comparten una estructura de negocio similar, pero cada marca tiene su propio posicionamiento y su propia audiencia, con necesidades que no siempre coinciden.',
@@ -635,9 +635,9 @@ function renderCaseStudy(slug){
     <a href="#" class="cs-back link-anim reveal" data-reveal onclick="Router.go('');return false;">← Volver al inicio</a>
     <h1 class="display-xl cs-hero-title reveal" data-reveal>${cs.heroTitle}</h1>
     <p class="body-lg reveal" data-reveal>${cs.heroDesc}</p>
+    <div class="cs-hero-img reveal-img" data-reveal>${cs.heroImg.src ? `<img src="${cs.heroImg.src}" alt="${cs.heroImg.alt || ''}">` : ph(cs.heroImg.id, cs.heroImg.label, cs.heroImg.sub, cs.heroImg.ratio)}</div>
     <div class="cs-meta-grid reveal" data-reveal>${metaHtml}</div>
-    <p class="meta reveal" data-reveal style="margin-bottom:36px;">Alcance: ${cs.scope}</p>
-    <div class="reveal-img" data-reveal>${ph(cs.heroImg.id, cs.heroImg.label, cs.heroImg.sub, cs.heroImg.ratio)}</div>
+    <p class="meta reveal" data-reveal>Alcance: ${cs.scope}</p>
   </section>
 
   ${sectionsHtml}
