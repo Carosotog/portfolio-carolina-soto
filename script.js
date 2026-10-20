@@ -66,10 +66,10 @@ const CASE_STUDIES = {
       { side:true, eyebrow:'D — POST-COMPRA', title:'La experiencia continúa después del pago',
         body:['Sumamos herramientas de seguimiento y autogestión para dar más visibilidad y control sobre los pedidos en curso: notificaciones push y la posibilidad de modificar dirección o tienda, destinatario y productos, dentro de lo que permite cada etapa del pedido.'],
         images:[{id:'image-wong-tracking', label:'WONG & METRO', sub:'Seguimiento y gestión de pedido', ratio:'16-10'}] },
-      { eyebrow:'E — PRIME', title:'Suscripción y beneficios',
+      { side:true, imgFirst:true, eyebrow:'E — PRIME', title:'Suscripción y beneficios',
         body:['Trabajé junto a equipos regionales de Cencosud en el diseño de la membresía Prime: estados de usuario, medios de pago, cupones y beneficios asociados.'],
         images:[{id:'image-wong-prime', label:'WONG & METRO', sub:'Prime — suscripción y beneficios', ratio:'16-10'}] },
-      { eyebrow:'F — MULTICANALIDAD', title:'Una base, dos marcas, dos plataformas',
+      { side:true, eyebrow:'F — MULTICANALIDAD', title:'Una base, dos marcas, dos plataformas',
         body:['Wong, Metro, web y app comparten una base de diseño escalable, con espacio para ajustar identidad, navegación, flujos y funcionalidad según la marca y el canal, sin perder consistencia de sistema.'],
         images:[{id:'image-wong-vs-metro', label:'WONG & METRO', sub:'Marcas y canales', ratio:'16-10'}] }
     ],
